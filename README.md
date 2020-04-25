@@ -8,6 +8,7 @@
 
 
 #### 示例用法一：
+'''python
 g1 = GeneratorCreator('3', '0123456789')    -> 拿到长度为3，密令字符组成为0123456789的密令生成对象
 for i in g1.generator():
     print(i)
@@ -18,8 +19,10 @@ for i in g1.generator():
 >> ...
 >> 998
 >> 999
+'''
 
 #### 示例用法二：
+'''python
 g1 = GeneratorCreator('3-4', '0123456789')    -> 拿到长度为3位到4位，密令字符组成为0123456789的密令生成对象
 for i in g1.generator():
     print(i)
@@ -34,8 +37,10 @@ for i in g1.generator():
 >> 0001
 >> ...
 >> 9999
+'''
 
 #### 示例用法三：
+'''python
 g1 = GeneratorCreator('3-4', '0123456789')    -> 拿到长度为3位到4位，密令字符组成为0123456789的密令生成对象
 tasks = g1.task_distribution(3)     -> 将总遍历任务分割为3个子任务
 print(tasks)
@@ -50,3 +55,4 @@ for i in g1.generator(tasks[0]):        -> 拿到的 tasks[0] 为 (0, 3666)
 >> 0002
 >> ...
 >> 3666
+'''
